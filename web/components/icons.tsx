@@ -35,3 +35,97 @@ export function XIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+/* Spark System step icons (line, currentColor) */
+
+function StepIcon({ children, ...props }: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      {children}
+    </svg>
+  );
+}
+
+export function DiscoverIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <StepIcon {...props}>
+      <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z" />
+    </StepIcon>
+  );
+}
+
+export function DefineIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <StepIcon {...props}>
+      <rect x="4" y="4" width="16" height="16" rx="3" />
+      <path d="M9 15l1-3 5-5 2 2-5 5-3 1Z" />
+    </StepIcon>
+  );
+}
+
+export function DesignIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <StepIcon {...props}>
+      <rect x="4" y="4" width="16" height="16" rx="3" />
+      <path d="M4 9h16M9 9v11" />
+    </StepIcon>
+  );
+}
+
+export function DeployIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <StepIcon {...props}>
+      <circle cx="12" cy="6" r="2.2" />
+      <circle cx="6" cy="17" r="2.2" />
+      <circle cx="18" cy="17" r="2.2" />
+      <path d="M11 8l-4 7M13 8l4 7M8.2 17h7.6" />
+    </StepIcon>
+  );
+}
+
+export function DriveIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <StepIcon {...props}>
+      <path d="M4 20h16" />
+      <path d="M5 16l5-5 3 3 6-6" />
+      <path d="M15 8h4v4" />
+    </StepIcon>
+  );
+}
+
+export function EvolveIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <StepIcon {...props}>
+      <rect x="4" y="4" width="16" height="16" rx="3" />
+      <path d="M15.5 10a4 4 0 1 0 .5 3" />
+      <path d="M16 7.5V10h-2.5" />
+    </StepIcon>
+  );
+}
+
+/* UI arrows — SVG rather than "→"/"↗" text, which Sora lacks (the fallback glyph sits off-centre) */
+
+export function ArrowRightIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M2.5 8h11M9.5 4l4 4-4 4" />
+    </svg>
+  );
+}
+
+export function ArrowUpRightIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M4.5 11.5l7-7M5.5 4.5h6v6" />
+    </svg>
+  );
+}

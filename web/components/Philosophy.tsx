@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { ArrowRightIcon } from "./icons";
 
 export default function Philosophy() {
   return (
@@ -25,7 +26,7 @@ export default function Philosophy() {
             build brands, create opportunities and drive meaningful growth.
           </p>
           <a href="#capabilities" className="link-arrow">
-            Our Philosophy <span className="arr">&rarr;</span>
+            Our Philosophy <ArrowRightIcon className="arr" />
           </a>
         </Reveal>
       </div>

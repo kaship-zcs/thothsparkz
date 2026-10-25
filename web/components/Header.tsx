@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ArrowRightIcon } from "./icons";
 
 const LINKS = [
   { id: "home", label: "Home" },
@@ -32,7 +33,8 @@ export default function Header() {
           if (e.isIntersecting) setActive(e.target.id);
         });
       },
-      { threshold: 0.5 }
+      // a section is "active" when it crosses the band just below the header
+      { rootMargin: "-80px 0px -60% 0px" }
     );
     sections.forEach((s) => spy.observe(s));
     return () => spy.disconnect();
@@ -64,7 +66,7 @@ export default function Header() {
             </a>
           ))}
           <a href="#contact" className="btn btn-ghost btn-sm nav-cta" onClick={() => setOpen(false)}>
-            Let&apos;s Talk <span className="arr">&rarr;</span>
+            Let&apos;s Talk <ArrowRightIcon className="arr" />
           </a>
         </nav>
 

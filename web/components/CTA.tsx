@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { ArrowRightIcon } from "./icons";
 
 export default function CTA() {
   return (
@@ -17,7 +18,7 @@ export default function CTA() {
             <strong>A BRIGHTER TOMORROW?</strong>
           </h2>
           <a href="mailto:hello@thothsparkz.com" className="btn btn-gold btn-lg">
-            Start a Conversation <span className="arr">&rarr;</span>
+            Start a Conversation <ArrowRightIcon className="arr" />
           </a>
         </Reveal>
         <p className="cta-note">
