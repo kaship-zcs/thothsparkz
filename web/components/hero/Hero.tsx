@@ -1,16 +1,15 @@
-"use client";
-import dynamic from "next/dynamic";
-
-const HeroScene = dynamic(() => import("./HeroScene"), {
-  ssr: false,
-  loading: () => null,
-});
+import Image from "next/image";
+import { ArrowRightIcon } from "../icons";
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
-      <div className="hero-canvas" aria-hidden="true">
-        <HeroScene />
+      <div className="hero-art" aria-hidden="true">
+        <div className="hero-photo">
+          {/* pre-sized, pre-compressed webp — served as-is so the optimizer doesn't re-encode it */}
+          <Image src="/hero-portal.webp" alt="" width={1680} height={1348} priority unoptimized />
+          <span className="hero-door-glow" />
+        </div>
       </div>
       <div className="hero-ridge" aria-hidden="true" />
 
@@ -30,7 +29,7 @@ export default function Hero() {
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn btn-gold">
-              Build Your Brand <span className="arr">&rarr;</span>
+              Build Your Brand <ArrowRightIcon className="arr" />
             </a>
             <a href="#work" className="btn btn-ghost">
               Explore Our Work

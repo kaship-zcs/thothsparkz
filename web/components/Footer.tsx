@@ -52,7 +52,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <p className="footer-slogan gold">
+        <p className="footer-slogan">
           A BRIGHTER
           <br />
           TOMORROW.

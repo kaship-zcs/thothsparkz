@@ -1,4 +1,11 @@
-const BRANDS = ["SASTHA", "MASTER FIX", "EDUWORLD", "FOCUZFIVE", "POGO SHAWAYA", "ADAAR"];
+const BRANDS = [
+  { name: "SASTHA", sub: "Earth Movers" },
+  { name: "MASTER FIX" },
+  { name: "EDUWORLD", sub: "International" },
+  { name: "FOCUZFIVE" },
+  { name: "POGO SHAWAYA" },
+  { name: "ADAAR", sub: "Properties" },
+];
 
 export default function Trusted() {
   return (
@@ -11,7 +18,10 @@ export default function Trusted() {
         </p>
         <div className="logos">
           {BRANDS.map((b) => (
-            <span key={b}>{b}</span>
+            <span key={b.name} className="logo">
+              {b.name}
+              {b.sub && <small>{b.sub}</small>}
+            </span>
           ))}
         </div>
         <p className="trusted-more">
