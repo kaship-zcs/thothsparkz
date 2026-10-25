@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Global learning globe with orbit">
+  <defs>
+    <linearGradient id="e-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1430"/><stop offset=".55" stop-color="#100b1c"/><stop offset="1" stop-color="#07050d"/>
+    </linearGradient>
+    <radialGradient id="e-glow" cx="50%" cy="46%" r="50%">
+      <stop offset="0" stop-color="#b79bd6" stop-opacity=".32"/><stop offset="1" stop-color="#b79bd6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="e-gold" x1="0" x2="1"><stop offset="0" stop-color="#b77a22"/><stop offset=".5" stop-color="#f4d18a"/><stop offset="1" stop-color="#a96e1e"/></linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#e-bg)"/>
+  <rect width="800" height="1000" fill="url(#e-glow)"/>
+  <!-- stars -->
+  <g fill="#f4d18a" opacity=".55">
+    <circle cx="120" cy="150" r="2"/><circle cx="680" cy="210" r="2.5"/><circle cx="240" cy="280" r="1.6"/>
+    <circle cx="600" cy="420" r="1.8"/><circle cx="150" cy="520" r="2"/><circle cx="700" cy="640" r="2.2"/>
+    <circle cx="90" cy="760" r="1.6"/><circle cx="660" cy="820" r="2"/>
+  </g>
+  <!-- globe -->
+  <g transform="translate(400 470)">
+    <circle r="190" fill="none" stroke="url(#e-gold)" stroke-width="3" opacity=".95"/>
+    <circle r="190" fill="#0a0713" opacity=".55"/>
+    <g fill="none" stroke="url(#e-gold)" stroke-width="2" opacity=".6">
+      <ellipse rx="190" ry="64"/><ellipse rx="190" ry="130"/>
+      <ellipse rx="64" ry="190"/><ellipse rx="130" ry="190"/>
+      <line x1="-190" y1="0" x2="190" y2="0"/>
+    </g>
+  </g>
+  <!-- orbit + node -->
+  <g transform="translate(400 470) rotate(-24)">
+    <ellipse rx="268" ry="110" fill="none" stroke="url(#e-gold)" stroke-width="2.5" opacity=".8" stroke-dasharray="3 10"/>
+    <circle cx="268" cy="0" r="12" fill="#f4d18a"/>
+  </g>
+  <!-- graduation spark -->
+  <path d="M400 150 l12 40 40 12 -40 12 -12 40 -12 -40 -40 -12 40 -12z" fill="#f4d18a"/>
+</svg>
